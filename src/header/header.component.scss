@@ -22,6 +22,12 @@
 
   &--title {
     font-size: 2rem;
+
+    a {
+      text-decoration: none;
+      color: $primary;
+      cursor: pointer;
+    }
   }
 
   &--items {

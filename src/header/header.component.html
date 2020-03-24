@@ -1,5 +1,7 @@
 <div [class]="style">
-  <div class="header--title">{{ title }}</div>
+  <div class="header--title">
+    <a [routerLink]="homePath">{{ title }}</a>
+  </div>
   <div class="header--items">
     <div class="header--item" *ngFor="let link of links">
       <neutron-header-link [theme]="theme" [path]="link.path" [fill]="linkFill"

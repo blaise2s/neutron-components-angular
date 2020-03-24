@@ -16,6 +16,7 @@ enum HeaderStyle {
 })
 export class HeaderComponent implements OnInit {
   @Input('title') title: string;
+  @Input('homePath') homePath = '/';
   @Input('links') links: LinkData[];
   @Input('theme') theme: HeaderTheme = 'primary';
   @Input('linkFill') linkFill = 'center';
