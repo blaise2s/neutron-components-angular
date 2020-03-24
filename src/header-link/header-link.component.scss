@@ -1,0 +1,128 @@
+@import '../scss/font.scss';
+@import '../scss/colors.scss';
+
+.header-link-fill {
+  content: '';
+  position: absolute;
+  width: 0;
+  opacity: 0;
+  height: 0.1rem;
+  bottom: 0;
+  transition: all 0.25s ease-in;
+}
+
+.header-link {
+  font-size: 1.1rem;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 0.25rem;
+
+  &.left.active,
+  &.right.active,
+  &.left:hover,
+  &.right:hover,
+  &.left:focus,
+  &.right:focus {
+    &:after {
+      width: 100%;
+      opacity: 1;
+    }
+  }
+
+  &.center.active,
+  &.ends.active,
+  &.center:hover,
+  &.ends:hover,
+  &.center:focus,
+  &.ends:focus {
+    &:before,
+    &:after {
+      width: 50%;
+      opacity: 1;
+    }
+  }
+
+  &--primary {
+    color: $primary;
+
+    &.left:after {
+      @extend .header-link-fill;
+      background-color: $secondary;
+      left: 0;
+    }
+
+    &.right:after {
+      @extend .header-link-fill;
+      background-color: $secondary;
+      right: 0;
+    }
+
+    &.center {
+      &:before {
+        @extend .header-link-fill;
+        background-color: $secondary;
+        left: 50%;
+      }
+      &:after {
+        @extend .header-link-fill;
+        background-color: $secondary;
+        right: 50%;
+      }
+    }
+
+    &.ends {
+      &:before {
+        @extend .header-link-fill;
+        background-color: $secondary;
+        left: 0;
+      }
+      &:after {
+        @extend .header-link-fill;
+        background-color: $secondary;
+        right: 0;
+      }
+    }
+  }
+
+  &--secondary {
+    color: $secondary;
+
+    &.left:after {
+      @extend .header-link-fill;
+      background-color: $primary;
+      left: 0;
+    }
+
+    &.right:after {
+      @extend .header-link-fill;
+      background-color: $primary;
+      right: 0;
+    }
+
+    &.center {
+      &:before {
+        @extend .header-link-fill;
+        background-color: $primary;
+        left: 50%;
+      }
+      &:after {
+        @extend .header-link-fill;
+        background-color: $primary;
+        right: 50%;
+      }
+    }
+
+    &.ends {
+      &:before {
+        @extend .header-link-fill;
+        background-color: $primary;
+        left: 0;
+      }
+      &:after {
+        @extend .header-link-fill;
+        background-color: $primary;
+        right: 0;
+      }
+    }
+  }
+}

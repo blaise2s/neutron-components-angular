@@ -1,28 +1,77 @@
-import { Directive, HostBinding, HostListener } from '@angular/core';
+import { Directive, HostBinding, Input, OnInit } from '@angular/core';
+
+type Button =
+  | 'primary'
+  | 'primary-stroked'
+  | 'primary-ghost'
+  | 'secondary'
+  | 'secondary-stroked'
+  | 'secondary-ghost'
+  | 'danger'
+  | 'danger-stroked'
+  | 'danger-ghost';
 
 @Directive({
   selector: '[neutronButton]'
 })
-export class ButtonDirective {
-  @HostBinding('style.font-size') fontSize = '1rem';
-  @HostBinding('style.background-color') backgroundColor = '#17dbce';
-  @HostBinding('style.color') color = '#000000';
-  @HostBinding('style.border') border = 'none';
-  @HostBinding('style.min-width') minWidth = '4rem';
-  @HostBinding('style.max-width') maxWidth = '20rem';
-  @HostBinding('style.min-height') minHeight = '2.5rem';
-  @HostBinding('style.padding') padding = '0.5rem 1rem';
+export class ButtonDirective implements OnInit {
+  @Input('neutronButton') neutronButton: Button = 'primary';
 
-  @HostListener('focus')
-  @HostListener('mouseenter')
-  mouseenter(): void {
-    this.backgroundColor = '#16cdc1';
+  @HostBinding('class.neutron--btn')
+  get baseClass() {
+    return true;
   }
 
-  @HostListener('blur')
-  @HostListener('mouseleave')
-  mouseleave(): void {
-    this.backgroundColor = '#17dbce';
+  @HostBinding('class.neutron--btn--primary')
+  get primaryButton() {
+    return this.neutronButton === 'primary';
   }
+
+  @HostBinding('class.neutron--btn--primary--stroked')
+  get primarySrokedButton() {
+    return this.neutronButton === 'primary-stroked';
+  }
+
+  @HostBinding('class.neutron--btn--primary--ghost')
+  get primaryGhostButton() {
+    return this.neutronButton === 'primary-ghost';
+  }
+
+  @HostBinding('class.neutron--btn--secondary')
+  get secondaryButton() {
+    return this.neutronButton === 'secondary';
+  }
+
+  @HostBinding('class.neutron--btn--secondary--stroked')
+  get secondarySrokedButton() {
+    return this.neutronButton === 'secondary-stroked';
+  }
+
+  @HostBinding('class.neutron--btn--secondary--ghost')
+  get secondaryGhostButton() {
+    return this.neutronButton === 'secondary-ghost';
+  }
+
+  @HostBinding('class.neutron--btn--danger')
+  get dangerButton() {
+    return this.neutronButton === 'danger';
+  }
+
+  @HostBinding('class.neutron--btn--danger--stroked')
+  get dangerStrokedButton() {
+    return this.neutronButton === 'danger-stroked';
+  }
+
+  @HostBinding('class.neutron--btn--danger--ghost')
+  get dangerGhostButton() {
+    return this.neutronButton === 'danger-ghost';
+  }
+
   constructor() {}
+
+  ngOnInit() {
+    if (!this.neutronButton) {
+      this.neutronButton = 'primary';
+    }
+  }
 }

@@ -1,15 +1,15 @@
-import { action } from '@storybook/addon-actions';
 import { moduleMetadata } from '@storybook/angular';
 import { withA11y } from '@storybook/addon-a11y';
 import { withKnobs } from '@storybook/addon-knobs';
-import { ButtonDirective } from './button.directive';
 import { CommonModule } from '@angular/common';
+import { TableComponent } from './table.component';
 
 export default {
-  title: 'Button',
+  component: TableComponent,
+  title: 'Table',
   decorators: [
     moduleMetadata({
-      declarations: [ButtonDirective],
+      declarations: [],
       imports: [CommonModule]
     }),
     withKnobs,
@@ -17,12 +17,7 @@ export default {
   ]
 };
 
-const clicked = action("I've been clicked!");
-const onClick = (): void => {
-  clicked();
-};
-
 export const basic = () => ({
-  template: '<button neutronButton (click)="onClick()">Click Me!</button>',
-  props: { onClick }
+  component: TableComponent,
+  props: {}
 });

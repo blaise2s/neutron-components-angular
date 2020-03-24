@@ -1,0 +1,34 @@
+@import '../scss/font.scss';
+@import '../scss/colors.scss';
+
+.header {
+  background-color: transparent;
+  height: 4rem;
+  box-shadow: 0 0 0.2rem $shadow;
+  margin-bottom: 0.2rem;
+  color: $primary;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.5rem;
+
+  &--primary {
+    color: $primary;
+  }
+
+  &--secondary {
+    color: $secondary;
+  }
+
+  &--title {
+    font-size: 2rem;
+  }
+
+  &--items {
+    display: flex;
+  }
+
+  &--item {
+    padding-right: 1rem;
+  }
+}

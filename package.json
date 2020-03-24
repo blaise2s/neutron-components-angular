@@ -1,13 +1,12 @@
 {
   "name": "neutron-components-angular",
-  "version": "0.0.2",
+  "version": "0.0.5",
   "scripts": {
     "build": "ng build",
     "e2e": "ng e2e",
     "lint": "ng lint",
     "ng": "ng",
     "prettier": "pretty-quick",
-    "start": "ng serve",
     "test": "ng test",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
@@ -29,9 +28,17 @@
   "devDependencies": {
     "@angular-devkit/build-angular": "^0.900.7",
     "@angular-devkit/build-ng-packagr": "^0.900.7",
+    "@angular/animations": "^9.0.7",
     "@angular/cli": "~9.0.7",
+    "@angular/common": "^9.0.7",
+    "@angular/compiler": "^9.0.7",
     "@angular/compiler-cli": "~9.0.7",
+    "@angular/core": "^9.0.7",
+    "@angular/forms": "^9.0.7",
     "@angular/language-service": "~9.0.7",
+    "@angular/platform-browser": "^9.0.7",
+    "@angular/platform-browser-dynamic": "^9.0.7",
+    "@angular/router": "^9.0.7",
     "@babel/core": "^7.9.0",
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
@@ -60,9 +67,12 @@
     "prettier": "^2.0.1",
     "pretty-quick": "^2.0.1",
     "protractor": "~5.4.3",
+    "rxjs": "^6.5.4",
     "ts-node": "~8.3.0",
+    "tslib": "^1.11.1",
     "tslint": "~5.18.0",
-    "typescript": "~3.7.5"
+    "typescript": "~3.7.5",
+    "zone.js": "^0.10.3"
   },
   "repository": {
     "type": "git",

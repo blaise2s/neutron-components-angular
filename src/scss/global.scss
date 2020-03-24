@@ -1,0 +1,247 @@
+@import './font.scss';
+@import './colors.scss';
+
+.neutron--btn {
+  font-size: 1rem;
+  border: none;
+  min-width: 4rem;
+  max-width: 20rem;
+  min-height: 2.5rem;
+  padding: 0.5rem 1rem;
+
+  &--primary {
+    background-color: $primary;
+    color: $white;
+
+    &:hover,
+    &:focus {
+      background-color: $primary--hover;
+      cursor: pointer;
+    }
+
+    &:active {
+      background-color: $primary--active;
+    }
+
+    &:disabled {
+      background-color: $disabled--primary;
+      color: $disabled--secondary;
+
+      &:hover {
+        cursor: not-allowed;
+      }
+    }
+
+    &--stroked {
+      background-color: $white;
+      color: $primary;
+      border-color: $primary;
+      border-width: 0.01rem;
+      border-style: solid;
+      transition: all 70ms cubic-bezier(0, 0, 0.38, 0.9);
+
+      &:hover,
+      &:focus {
+        background-color: $primary;
+        color: $white;
+        cursor: pointer;
+      }
+
+      &:active {
+        background-color: $primary--active;
+      }
+
+      &:disabled {
+        background-color: $white;
+        color: $disabled--primary;
+        border-color: $disabled--primary;
+
+        &:hover {
+          cursor: not-allowed;
+        }
+      }
+    }
+    &--ghost {
+      background-color: transparent;
+      color: $primary;
+      transition: all 70ms cubic-bezier(0, 0, 0.38, 0.9);
+
+      &:hover,
+      &:focus {
+        background-color: $primary--hover--ghost;
+        cursor: pointer;
+      }
+
+      &:active {
+        background-color: $primary--active--ghost;
+      }
+
+      &:disabled {
+        background-color: transparent;
+        color: $disabled--primary;
+
+        &:hover {
+          cursor: not-allowed;
+        }
+      }
+    }
+  }
+
+  &--secondary {
+    background-color: $secondary;
+    color: $black;
+
+    &:hover,
+    &:focus {
+      background-color: $secondary--hover;
+      cursor: pointer;
+    }
+
+    &:active {
+      background-color: $secondary--active;
+    }
+
+    &:disabled {
+      background-color: $disabled--primary;
+      color: $disabled--secondary;
+
+      &:hover {
+        cursor: not-allowed;
+      }
+    }
+
+    &--stroked {
+      background-color: $white;
+      color: $secondary;
+      border-color: $secondary;
+      border-width: 0.01rem;
+      border-style: solid;
+      transition: all 70ms cubic-bezier(0, 0, 0.38, 0.9);
+
+      &:hover,
+      &:focus {
+        background-color: $secondary;
+        color: $white;
+        cursor: pointer;
+      }
+
+      &:active {
+        background-color: $secondary--active;
+      }
+
+      &:disabled {
+        background-color: $white;
+        color: $disabled--primary;
+        border-color: $disabled--primary;
+
+        &:hover {
+          cursor: not-allowed;
+        }
+      }
+    }
+
+    &--ghost {
+      background-color: transparent;
+      color: $secondary;
+      transition: all 70ms cubic-bezier(0, 0, 0.38, 0.9);
+
+      &:hover,
+      &:focus {
+        background-color: $secondary--hover--ghost;
+        cursor: pointer;
+      }
+
+      &:active {
+        background-color: $secondary--active--ghost;
+      }
+
+      &:disabled {
+        background-color: transparent;
+        color: $disabled--primary;
+
+        &:hover {
+          cursor: not-allowed;
+        }
+      }
+    }
+  }
+
+  &--danger {
+    background-color: $danger;
+    color: $black;
+
+    &:hover,
+    &:focus {
+      background-color: $danger--hover;
+      cursor: pointer;
+    }
+
+    &:active {
+      background-color: $danger--active;
+    }
+
+    &:disabled {
+      background-color: $disabled--primary;
+      color: $disabled--secondary;
+
+      &:hover {
+        cursor: not-allowed;
+      }
+    }
+
+    &--stroked {
+      background-color: $white;
+      color: $danger;
+      border-color: $danger;
+      border-width: 0.01rem;
+      border-style: solid;
+      transition: all 70ms cubic-bezier(0, 0, 0.38, 0.9);
+
+      &:hover,
+      &:focus {
+        background-color: $danger;
+        color: $white;
+        cursor: pointer;
+      }
+
+      &:active {
+        background-color: $danger--active;
+      }
+
+      &:disabled {
+        background-color: $white;
+        color: $disabled--primary;
+        border-color: $disabled--primary;
+
+        &:hover {
+          cursor: not-allowed;
+        }
+      }
+    }
+
+    &--ghost {
+      background-color: transparent;
+      color: $danger;
+      transition: all 70ms cubic-bezier(0, 0, 0.38, 0.9);
+
+      &:hover,
+      &:focus {
+        background-color: $danger--hover--ghost;
+        cursor: pointer;
+      }
+
+      &:active {
+        background-color: $danger--active--ghost;
+      }
+
+      &:disabled {
+        background-color: transparent;
+        color: $disabled--primary;
+
+        &:hover {
+          cursor: not-allowed;
+        }
+      }
+    }
+  }
+}
