@@ -1,4 +1,4 @@
-<div class="neutron--input">
+<div class="neutron--input--container">
   <label class="neutron--input-label" [for]="labelID">
     <ng-content></ng-content>
   </label>
@@ -15,5 +15,8 @@
       [ngTemplateOutlet]="invalidMessage"
     ></ng-template>
   </div>
-  <div *ngIf="!invalid" class="neutron--input-requirement-hold"></div>
+  <div
+    *ngIf="!invalid || !invalidMessage"
+    class="neutron--input-requirement-hold"
+  ></div>
 </div>

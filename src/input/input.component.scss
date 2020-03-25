@@ -1,15 +1,17 @@
 @import '../scss/colors.scss';
-@import '../scss/font.scss';
+@import '../scss/fonts.scss';
 
 .label-font {
   font-size: 0.9rem;
 }
 
 .neutron--input {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: fit-content;
+  &--container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: fit-content;
+  }
 
   &-label {
     @extend .label-font;

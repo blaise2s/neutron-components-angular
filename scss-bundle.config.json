@@ -1,0 +1,9 @@
+{
+  "bundlerOptions": {
+    "project": "./",
+    "rootDir": "./src/scss/",
+    "entryFile": "./src/scss/index.scss",
+    "outFile": "./dist/neutron-components-angular/bundled.scss",
+    "logLevel": "warning"
+  }
+}
