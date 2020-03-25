@@ -14,7 +14,7 @@ export default {
   title: 'Header',
   decorators: [
     moduleMetadata({
-      declarations: [HeaderLinkComponent],
+      declarations: [HeaderComponent, HeaderLinkComponent],
       imports: [
         CommonModule,
         RouterModule.forRoot([
@@ -48,9 +48,20 @@ const links: LinkData[] = [
 ];
 
 export const basic = () => ({
-  component: HeaderComponent,
+  template: `
+    <neutron-header
+      [titleTheme]="titleTheme"
+      [links]="links"
+      [linkTheme]="linkTheme"
+      [linkFill]="linkFill"
+    >{{ title }}
+    </neutron-header>
+  `,
   props: {
     title: 'Fitrition',
+    titleTheme: 'primary',
+    linkTheme: 'secondary',
+    linkFill: 'center',
     links
   }
 });

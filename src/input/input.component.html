@@ -1,0 +1,19 @@
+<div class="neutron--input">
+  <label class="neutron--input-label" [for]="labelID">
+    <ng-content></ng-content>
+  </label>
+  <div class="neutron--input-helper-text">{{ helperText }}</div>
+  <div #wrapper>
+    <ng-content select="input,textarea,div"></ng-content>
+  </div>
+  <div *ngIf="invalid" class="neutron--input-requirement">
+    <ng-container *ngIf="!isTemplate(invalidMessage)">
+      {{ invalidMessage }}
+    </ng-container>
+    <ng-template
+      *ngIf="isTemplate(invalidMessage)"
+      [ngTemplateOutlet]="invalidMessage"
+    ></ng-template>
+  </div>
+  <div *ngIf="!invalid" class="neutron--input-requirement-hold"></div>
+</div>

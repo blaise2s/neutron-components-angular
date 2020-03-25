@@ -1,6 +1,52 @@
 @import './font.scss';
 @import './colors.scss';
 
+.neutron--input {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  padding: 0.2rem 0.25rem;
+  border: none;
+  border-bottom: 0.01rem solid $gray;
+  resize: vertical;
+
+  &:disabled {
+    cursor: not-allowed;
+    border: none;
+
+    &::placeholder {
+      color: $disabled--primary;
+    }
+  }
+
+  &--primary {
+    &:focus {
+      // &:active:not(.neutron--text-input--invalid),
+      // &:focus:not(.neutron--text-input--invalid) {
+      outline: 0.15rem solid $primary;
+    }
+  }
+
+  &--secondary {
+    &:focus {
+      // &:active:not(.neutron--text-input--invalid),
+      // &:focus:not(.neutron--text-input--invalid) {
+      outline: 0.15rem solid $secondary;
+    }
+  }
+
+  &--dark {
+    background-color: $light-gray;
+  }
+
+  &--light {
+    background-color: $white;
+  }
+
+  // &--invalid {
+  //   outline: 0.15rem solid $danger;
+  // }
+}
+
 .neutron--btn {
   font-size: 1rem;
   border: none;

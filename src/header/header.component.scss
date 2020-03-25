@@ -6,27 +6,30 @@
   height: 4rem;
   box-shadow: 0 0 0.2rem $shadow;
   margin-bottom: 0.2rem;
-  color: $primary;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 0.5rem;
+  padding: 0 1rem;
+
+  a {
+    font-size: 2rem;
+    text-decoration: none;
+    cursor: pointer;
+  }
 
   &--primary {
     color: $primary;
+
+    a {
+      color: $primary;
+    }
   }
 
   &--secondary {
     color: $secondary;
-  }
-
-  &--title {
-    font-size: 2rem;
 
     a {
-      text-decoration: none;
-      color: $primary;
-      cursor: pointer;
+      color: $secondary;
     }
   }
 
@@ -35,6 +38,6 @@
   }
 
   &--item {
-    padding-right: 1rem;
+    padding-left: 1rem;
   }
 }

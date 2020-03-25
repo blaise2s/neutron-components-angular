@@ -1,10 +1,11 @@
 <div [class]="style">
-  <div class="header--title">
-    <a [routerLink]="homePath">{{ title }}</a>
-  </div>
+  <a [routerLink]="homePath"><ng-content></ng-content></a>
   <div class="header--items">
     <div class="header--item" *ngFor="let link of links">
-      <neutron-header-link [theme]="theme" [path]="link.path" [fill]="linkFill"
+      <neutron-header-link
+        [theme]="linkTheme"
+        [path]="link.path"
+        [fill]="linkFill"
         >{{ link.title }}
       </neutron-header-link>
     </div>

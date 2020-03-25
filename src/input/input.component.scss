@@ -1,0 +1,33 @@
+@import '../scss/colors.scss';
+@import '../scss/font.scss';
+
+.label-font {
+  font-size: 0.9rem;
+}
+
+.neutron--input {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: fit-content;
+
+  &-label {
+    @extend .label-font;
+    color: $black;
+  }
+
+  &-helper-text {
+    @extend .label-font;
+    color: $gray;
+  }
+
+  &-requirement {
+    @extend .label-font;
+    color: $danger;
+    line-height: 1.5rem;
+
+    &-hold {
+      height: 1.5rem;
+    }
+  }
+}

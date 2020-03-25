@@ -15,11 +15,11 @@ enum HeaderStyle {
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  @Input('title') title: string;
   @Input('homePath') homePath = '/';
   @Input('links') links: LinkData[];
-  @Input('theme') theme: HeaderTheme = 'primary';
+  @Input('titleTheme') titleTheme: HeaderTheme = 'primary';
   @Input('linkFill') linkFill = 'center';
+  @Input('linkTheme') linkTheme: HeaderTheme = 'primary';
   private _style: string[] = [HeaderStyle.BASE];
 
   get style() {
@@ -29,17 +29,13 @@ export class HeaderComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    if (!this.title) {
-      throw new Error("Attribute 'title' is required");
+    if (!this.titleTheme) {
+      this.titleTheme = 'primary';
     }
 
-    if (!this.theme) {
-      this.theme = 'primary';
-    }
-
-    if (this.theme === 'primary') {
+    if (this.titleTheme === 'primary') {
       this._style.push(HeaderStyle.PRIMARY);
-    } else if (this.theme === 'secondary') {
+    } else if (this.titleTheme === 'secondary') {
       this._style.push(HeaderStyle.SECONDARY);
     }
   }
